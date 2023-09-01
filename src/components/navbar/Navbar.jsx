@@ -1,21 +1,20 @@
 import { React, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './navbar.css';
 
 import logo from '../../assets/logo.png';
 
-//BEM -> Block Element Modifier
-
 
 const Menu = () => (
   <>
-    <p><a href="/">Home</a></p>
-    <p><a href="/about">About</a></p>
-    <p><a href="/models">Vehicle Models</a></p>
-    <p><a href="/testimonials">Testimonials</a></p>
-    <p><a href="/team">Our Team</a></p>
-    <p><a href="/contact">Contact</a></p>
+    <p><Link to="/">Home</Link></p>
+    <p><Link to="/about">About</Link></p>
+    <p><Link to="/models">Vehicle Models</Link></p>
+    <p><Link to="/testimonials">Testimonials</Link></p>
+    <p><Link to="/team">Our Team</Link></p>
+    <p><Link to="/contact">Contact</Link></p>
   </>
 )
 
@@ -25,10 +24,10 @@ const Navbar = () => {
 
   return (
     <nav className="rental__navbar" id="top">
-      <div className="rental__navbar-links_logo">
-        <a href='/'>
-        <img src={logo} alt="logo" />
-        </a>
+      <div className="rental__navbar-logo">
+        <Link to='/'>
+          <img src={logo} alt="logo" />
+        </Link>
       </div>
 
       <div className="rental__navbar-links">
@@ -36,13 +35,13 @@ const Navbar = () => {
       </div>
 
       <div className="rental__navbar-sign">
-        <p><a href="/">Sign in</a></p>
-        <a href='/' className="nav-button">Register</a>
+        <p><Link to="/">Sign in</Link></p>
+        <Link to='/' className="nav-button">Register</Link>
       </div>
 
       <div className="rental__navbar-menu">
         {toggleMenu
-        ? <RiCloseLine color="#010306" size={27} onClick={() => setToggleMenu(false)} />
+        ? <RiCloseLine color="#010306" size={36} onClick={() => setToggleMenu(false)} />
         : <RiMenu3Line color="#010306" size={27} onClick={() => setToggleMenu(true)} />
         }
 
@@ -52,8 +51,8 @@ const Navbar = () => {
               <Menu />
             </div>
             <div className="rental__navbar-menu_container-links-sign">
-              <a href='/'><p>Sign in</p></a>
-              <a href='/' className="nav-button">Register</a>
+              <Link to='/'><p>Sign in</p></Link>
+              <Link to='/' className="nav-button">Register</Link>
             </div>
           </div>
         )}
