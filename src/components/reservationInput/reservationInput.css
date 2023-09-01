@@ -1,0 +1,25 @@
+span{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+span > input {
+    background: rgba(0,0,0,0.15);
+    font-size: 15px;
+    padding: 0.75rem 1rem;
+    border: none;
+}
+
+span > label {
+    color: #777;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+span > label > b {
+    color: var(--color-secondary);
+}
+
+span > p {
+    font-size: 10px;
+}

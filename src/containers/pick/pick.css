@@ -1,0 +1,153 @@
+
+.rental__pick{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.rental__pick-header{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    font-family: var(--font-family);
+}
+
+.rental__pick-header > h2 {
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.rental__pick-header > h1 {
+    font-size: 42px;
+}
+
+.rental__pick-header > p {
+    max-width: 550px;
+    font-size: 15px;
+    color: #706f7b;
+}
+
+.rental__pick_car-content{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.rental__pick_car-content_pick{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.pick-button{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding: 0.9rem 1.65rem;
+    font-weight: 600;
+    font-size: 20px;
+    background: #eee;
+    color: #010103;
+    transition: all 300ms;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+}
+
+.pick-button.picked,
+.pick-button:hover {
+    color: white;
+    background: var(--color-secondary);
+}
+
+.rental__pick_car-content_car{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.rental__pick_car-content_car-picked{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.rental__pick_car-content_car-picked > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.rental__pick_car-content_car-description{
+    width: 15rem;
+}
+
+
+.rental__pick_car-content_car-description_price{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    color: white;
+    background: var(--color-secondary);
+    font-family: var(--font-family);
+}
+
+.rental__pick_car-content_car-description_price > span {
+    display: inline-block;
+    flex: 3;
+    text-align: end;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.rental__pick_car-content_car-description_price > p {
+    flex: 5;
+    display: inline-block;
+}
+
+.rental__pick_car-content_car-description_table{
+    margin-bottom: 1rem;
+}
+
+
+.cta-button{
+    background: var(--color-secondary);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 5px 5px 0px 0px #ddd;
+    padding: 0.8rem 1.3rem;
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 300ms ease;
+}
+
+.cta-button:hover{
+    background: #e9381d;
+    box-shadow: 0px 0px 0px 0px #ddd;
+}
+
+@media screen and (max-width: 1100px){
+    .rental__pick_car-content{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .rental__pick_car-content_car{
+        flex-direction: column;
+        align-items: center;
+    }
+}

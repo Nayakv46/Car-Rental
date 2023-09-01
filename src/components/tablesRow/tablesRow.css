@@ -1,0 +1,15 @@
+.description_table_row{
+    display: flex;
+    
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 14px;
+    border-left: 2px solid #706f7b;
+    border-right: 2px solid #706f7b;
+    border-bottom: 2px solid #706f7b;
+    padding: 0.5rem;
+}
+
+.description_table_row > .table_row2{
+    border-left: 2px solid #706f7b;
+}

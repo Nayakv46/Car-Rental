@@ -1,0 +1,24 @@
+.rental__models{
+    display: flex;
+    justify-content: center;
+}
+
+.rental__models-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 75rem;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 1200px){
+    .rental__models-content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .rental__models-content{
+        display: flex;
+        flex-direction: column;
+    }
+}

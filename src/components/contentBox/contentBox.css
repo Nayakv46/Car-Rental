@@ -1,0 +1,27 @@
+.contentBox__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 290px;
+}
+
+.contentBox__container > img {
+    width: 50%;
+}
+
+.contentBox__container-content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contentBox__container-content > h2 {
+    font-size: 22px;
+}
+
+.contentBox__container-content > p {
+    font-size: 15px;
+    color: #706f7b;
+    line-height: 20px;
+}

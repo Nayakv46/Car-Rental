@@ -1,0 +1,68 @@
+.rental__download{
+    background: url('../../assets/download-bg.png');
+    background-color: #f8f8f8;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.rental__download-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: var(--font-family);
+    flex: 1;
+    max-width: 80rem;
+}
+
+.rental__download-content > h2 {
+    font-size: 42px;
+    max-width: 35rem;
+}
+
+.rental__download-content > p {
+    font-size: 15px;
+    max-width: 35rem;
+    color: #706f7b;
+}
+
+.rental__download-content_buttons{
+    display: flex;
+    gap: 2rem;
+}
+
+.rental__download-content_buttons > img {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1650px){
+    .rental__download-content{
+        max-width: 68rem;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .rental__download{
+        background: none;
+        background-color: #f8f8f8;
+    }
+    .rental__download-content{
+        text-align: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .rental__download-content_buttons{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .rental__download-content_buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+}

@@ -1,0 +1,41 @@
+.rental__faq{
+    background: url('../../assets/faq-bg.png');
+    background-position: 0 70%;
+    background-repeat: no-repeat;
+}
+
+.rental__faq-content{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    font-family: var(--font-family);
+}
+
+.rental__faq-content_header{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+
+}
+
+.rental__faq-content_header h4 {
+    font-size: 22px;
+}
+
+.rental__faq-content_header h1 {
+    font-size: 42px;
+}
+
+.rental__faq-content_header p {
+    margin-top: 1rem;
+    color: #706f7b;
+    font-size: 15px;
+}
+
+.rental__faq-content_questions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

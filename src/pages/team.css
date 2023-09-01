@@ -1,0 +1,25 @@
+.rental__team{
+    display: flex;
+    justify-content: center;
+}
+
+.rental__team-content{
+    display: grid;
+    align-items: center;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 75rem;
+}
+
+@media screen and (max-width: 1355px){
+    .rental__team-content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    .rental__team-content{
+        grid-template-columns: 1fr;
+    }
+}

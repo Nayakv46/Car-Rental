@@ -1,0 +1,39 @@
+.whyusbox_container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem 2rem 1rem;
+}
+.whyusbox_container > img {
+    width: 110px;
+    height: 110px;
+    margin-top: 0.5rem;
+
+}
+
+.whyusbox_container-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: var(--font-family);
+    max-width: 30rem;
+
+}
+
+.whyusbox_container-content > h4{
+    font-size: 24px;
+}
+
+.whyusbox_container-content > p {
+    color: #706f7b;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 650px){
+    .whyusbox_container{
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    
+}

@@ -1,0 +1,56 @@
+.rental__plan{
+  font-family: var(--font-family);
+}
+
+.rental__plan-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.rental__plan-container-header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 0.5rem;
+}
+
+.rental__plan-container-header > h4 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.rental__plan-container-header > h1{
+    font-size: 38px;
+}
+
+.rental__plan-container-content{
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+}
+.rental__plan-container-content_top{
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1100px) {
+    .rental__plan-container-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .rental__plan-container-content_top{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .rental__plan-container-content{
+        gap: 2rem;
+    }
+}

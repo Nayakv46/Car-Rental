@@ -1,0 +1,47 @@
+.rental__banner{
+    background: #2d2d2d;
+    color: white;
+    font-family: var(--font-family);
+}
+
+.rental__banner-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rental__banner-content h2 {
+    font-size: 52px;
+    text-align: center;
+}
+
+.rental__banner-content p{
+    font-size: 24px;
+    text-align: center;
+}
+
+.rental__banner-content > p > span {
+    display: inline-block;
+    color: var(--color-secondary);
+}
+
+@media screen and (max-width: 700px){
+    .rental__banner-content h2 {
+        font-size: 44px;
+    }
+
+    .rental__banner-content p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .rental__banner-content h2 {
+        font-size: 40px;
+    }
+
+    .rental__banner-content p {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,278 @@
+.rental__booking-reservation_overlay{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+}
+.rental__booking-reservation_overlay.active{
+    display: flex;
+}
+
+.rental__booking-reservation-container{
+    font-family: var(--font-family);
+    z-index: 11;
+    width: 50rem;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    padding: 2px;
+}
+.rental__booking-reservation-container.active{
+    display: flex;
+    position: fixed;
+    background: white;
+    opacity: 1;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 10;
+}
+
+.rental__booking-reservation-container_banner{
+    background: var(--color-secondary);
+    color: white;
+    font-weight: 700;
+    font-size: 26px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rental__booking-reservation-container_banner > svg {
+    cursor: pointer;
+}
+
+.rental__booking-reservation-container_info{
+    padding: 1rem 2rem;
+    background: #ffeae6;
+}
+
+.rental__booking-reservation-container_info h2 {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.rental__booking-reservation-container_info > h2 > svg {
+    font-size: 24px;
+    margin-right: 0.5rem;
+}
+
+.rental__booking-reservation-container_info p{
+    color: #777;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.rental__booking-reservation-container_description{
+    display: flex;
+    padding: 1rem 2rem;
+}
+
+.rental__booking-reservation-container_description-locationdate{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+.rental__booking-reservation-container_description-locationdate > h2 {
+    color: var(--color-secondary);
+    font-size: 18px;
+}
+.rental__booking-reservation-container_description-locationdate > div > span{
+    display: flex; 
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+
+
+
+.rental__booking-reservation-container_description-locationdate > div > span > div > h6 {
+    font-size: 15px;
+}
+.rental__booking-reservation-container_description-locationdate > div > span > div > p {
+    margin-top: 0.25rem;
+    color: #777;
+    font-size: 15px;
+}
+
+.description-car{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.description-car > h5 {
+    display: inline-block;
+    color: var(--color-secondary);
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+.description-car > h5 > span {
+    display: inline-block;
+    color: black;
+}
+
+.description-car > img {
+    width: 100%
+}
+.rental__booking-reservation-container_personal-info {
+    padding: 1rem 2rem;
+}
+
+.rental__booking-reservation-container_personal-info > h4 {
+    font-size: 20px;
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+
+.personal-info_form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0 0 0 ;
+}
+.personal-info__group1{
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+}
+
+.personal-info__group2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.personal-info__group3{
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Basic checkbox styling */
+
+[type=checkbox] {
+    width: 1rem;
+    height: 1rem;
+    color: dodgerblue;
+    vertical-align: middle;
+    background: none;
+    border: 0;
+    outline: 0;
+    flex-grow: 0;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+  
+.personal-info_form > span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.personal-info_form > span > p {
+    font-size: 16px;
+}
+
+.reserve-button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+    background: rgba(0,0,0,0.15);
+}
+
+.reserve-button > button {
+    background: var(--color-secondary);
+    border: none;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0 10px 15px 0 rgba(255,83,48,0.35);
+
+    padding: 0.8rem 1.45rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+.reserve-button > button:hover{
+    background: #fa4226;
+    box-shadow: 0 10px 15px 0 rgba(255, 83, 38, 0.5);
+}
+
+@media screen and (max-width: 850px){
+    /* Location & Date and car flex-direction: column */
+    .rental__booking-reservation-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .rental__booking-reservation-container_description{
+        flex-direction: column;  
+        align-items: center;
+    }
+
+    .rental__booking-reservation-container_description-locationdate > h2 {
+        text-align: center;
+    }
+
+    .rental__booking-reservation-container_description-locationdate > div > span{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .rental__booking-reservation-container_description-locationdate > div > span > svg {
+        display: none;
+    }
+    .description-car{
+        align-items: center;
+    }
+    .description-car > h5 {
+        margin-bottom: 1rem;
+    }
+
+    .description-car > img {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .description-car{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .personal-info__group1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .personal-info__group3{
+        flex-direction: column;
+    }
+
+    .reserve-button{
+        justify-content: center;
+    }
+}
