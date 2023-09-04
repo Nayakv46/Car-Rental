@@ -11,7 +11,7 @@
 » BEM CSS <br/>
 » React JS
 
-<h2>Screenshots of the Project</h2>
+<h2>Screenshots of the Project 📸</h2>
 
 <h3 align='center'>Home Page 🏡</h3>
 
