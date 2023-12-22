@@ -9,12 +9,12 @@ import logo from '../../assets/logo.png';
 
 const Menu = () => (
   <>
-    <p><Link to="/">Home</Link></p>
-    <p><Link to="/about">About</Link></p>
-    <p><Link to="/models">Vehicle Models</Link></p>
-    <p><Link to="/testimonials">Testimonials</Link></p>
-    <p><Link to="/team">Our Team</Link></p>
-    <p><Link to="/contact">Contact</Link></p>
+    <li><Link to="/">Home</Link></li>
+    <li><Link to="/about">About</Link></li>
+    <li><Link to="/models">Vehicle Models</Link></li>
+    <li><Link to="/testimonials">Testimonials</Link></li>
+    <li><Link to="/team">Our Team</Link></li>
+    <li><Link to="/contact">Contact</Link></li>
   </>
 )
 
@@ -30,9 +30,9 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="rental__navbar-links">
+      <ul className="rental__navbar-links">
           <Menu />
-      </div>
+      </ul>
 
       <div className="rental__navbar-sign">
         <p><Link to="/">Sign in</Link></p>
@@ -47,9 +47,9 @@ const Navbar = () => {
 
         {toggleMenu && (
           <div className="rental__navbar-menu_container scale-up-center">
-            <div className="rental__navbar-menu-container-links">
+            <ul className="rental__navbar-menu-container-links">
               <Menu />
-            </div>
+            </ul>
             <div className="rental__navbar-menu_container-links-sign">
               <Link to='/'><p>Sign in</p></Link>
               <Link to='/' className="nav-button">Register</Link>

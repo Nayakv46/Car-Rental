@@ -12,6 +12,11 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    /* gap: 1.2rem;
+    font-family: var(--font-family); */
+    list-style: none;
+    /* font-size: 18px;
+    font-weight: 600;  */
 }
 
 .rental__navbar-logo {
@@ -30,8 +35,9 @@
     align-items: center;
 }
 
-.rental__navbar-links p,
+.rental__navbar-links li,
 .rental__navbar-sign p,
+.rental__navbar-menu_container li,
 .rental__navbar-menu_container p {
     color: #010103;
     font-family: var(--font-family);
@@ -42,6 +48,19 @@
     cursor: pointer;
     transition: color 0.6s;
     z-index: 3;
+}
+
+.rental__navbar-menu-container-links {
+    list-style: none;
+}
+.rental__navbar-menu-container-links > li {
+    margin: 0;
+}
+
+@media screen and (max-width: 1100px){
+    .rental__navbar-links li {
+        margin: 0 0.4rem;
+    }
 }
 
 .rental__navbar-links p:hover,
@@ -104,7 +123,7 @@
     min-width: 210px;
     border-radius: 3px;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    
+    list-style: none;
 }
 
 .rental__navbar-menu_container p {
