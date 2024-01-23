@@ -1,5 +1,5 @@
 import React from 'react';
-import './modelBox.css';
+import './modelBox.scss';
 
 import audi_model from '../../assets/audia1.jpg';
 import golf_model from '../../assets/vwgolf.jpg';
@@ -37,12 +37,12 @@ const ModelBox = (props) => {
 
   return (
     <div className="modelBox">
-        <div className="modelBox_image">
+        <div className="modelBox__image">
             <img src={imgHandler(props.img)} alt="vehicle_model" />
         </div>
-        <div className="modelBox_content">
-            <div className="modelBox_content-description">
-                <div className="modelBox_content-description_name">
+        <div className="modelBox__content">
+            <div className="modelBox__content-description">
+                <div className="modelBox__content-description_name">
                     <h2>{props.mark}</h2>
                     <p>
                         <PiStarFill size={18} color="#ffc933" />
@@ -53,31 +53,31 @@ const ModelBox = (props) => {
                     </p>
                 </div>
 
-                <div className='modelBox_content-description_price'>
+                <div className='modelBox__content-description_price'>
                     <h2>{props.price}</h2>
                     <p>per day</p>
                 </div>
             </div>
-            
-            <div className="modelBox_content-details">
-                <div className="modelBox_content-details_model">
+
+            <div className="modelBox__content-details">
+                <div className="modelBox__content-details_model">
                     <span><IoLogoModelS size={24} color="#010103" /> {props.model}</span>
                 </div>
 
-                <div className="modelBox_content-details_doors">
+                <div className="modelBox__content-details_doors">
                     <span>{props.doors} <GiCarDoor size={24} color="#010103" /></span>
                 </div>
 
-                <div className="modelBox_content-details_transmission">
+                <div className="modelBox__content-details_transmission">
                     <span><GiGearStickPattern size={24} color="#010103" /> {props.transmission}</span>
                 </div>
 
-                <div className="modelBox_content-details_fuel">
+                <div className="modelBox__content-details_fuel">
                     <span>{props.fuel} <PiGasCanFill size={24} color="#010103" /></span>
                 </div>
             </div>
             <hr />
-            <div className="modelBox_content-button">
+            <div className="modelBox__content-button">
                 <button type="button">Book Ride</button>
             </div>
         </div>

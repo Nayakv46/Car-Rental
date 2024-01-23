@@ -1,5 +1,5 @@
 import React from 'react';
-import './contentBox.css'
+import './contentBox.scss'
 
 import boxIcon1 from '../../assets/boxicon1.png';
 import boxIcon2 from '../../assets/boxicon2.png';
@@ -22,10 +22,10 @@ const imgSwitch = (imgSrc) => {
 const ContentBox = ({ imgSrc, header, paragraph }) => {
   return (
     <div className="contentBox__container">
-        <img src={imgSwitch(imgSrc)} alt="contentBox_img" />
-        <div className="contentBox__container-content">
-            <h2>{header}</h2>
-            <p>{paragraph}</p>
+        <img src={imgSwitch(imgSrc)} className="contentBox__icon" alt="contentBox_img" />
+        <div className="contentBox__content">
+            <h2 className='contentBox__header'>{header}</h2>
+            <p className='contentBox__text'>{paragraph}</p>
         </div>
     </div>
   )

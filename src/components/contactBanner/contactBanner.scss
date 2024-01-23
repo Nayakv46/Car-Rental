@@ -1,0 +1,77 @@
+.contact-banner{
+    position: relative;
+    padding-top: 4rem; 
+    padding-bottom: 4rem;
+    background-color: #2d2d2d;
+    
+    &:before{
+        content: "";
+        position: absolute;
+        background: url('../../assets/contactbanner-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        left: 0;
+        background-position: 0%;
+        opacity: 0.11;
+    }
+
+    &__content{
+        color: #fff;
+        font-family: var(--font-family);
+        display: flex;
+        gap: 5rem;
+        z-index: 3;
+    }
+
+    &__title{
+        font-size: 32px;
+        color: #fff;
+        z-index: 5;
+        flex: 2;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__phone{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        color: var(--color-secondary);
+        font-size: 32px;
+        font-weight: 700;
+        min-width: 21rem;
+        z-index: 5;
+
+        & > svg {
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1110px){
+    .contact-banner{
+        padding: 2rem;
+
+        &__content{
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        &__phone{
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 700px){
+    .contact-banner__title,
+    .contact-banner__phone {
+        font-size: 28px;
+    }
+}

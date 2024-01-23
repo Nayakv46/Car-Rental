@@ -1,12 +1,12 @@
 import React from 'react';
-import './pageNamer.css';
+import './pageNamer.scss';
 
 const PageNamer = (props) => {
   return (
     <section className="page__header" >
         <div className="page__header-content">
-            <h1>{props.pageName}</h1>
-            <h4>Home / {props.pageName}</h4>
+            <h1 className='page__header-name'>{props.pageName}</h1>
+            <h4 className='page__header-path'>Home / {props.pageName}</h4>
         </div>
     </section>
   )

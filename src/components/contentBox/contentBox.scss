@@ -1,0 +1,29 @@
+.contentBox{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 290px;
+    }
+
+    &__icon{
+        width: 50%;
+    }
+
+    &__content{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__header {
+        font-size: 22px;
+    }
+
+    &__text {
+        font-size: 15px;
+        color: #706f7b;
+        line-height: 20px;
+    }
+}

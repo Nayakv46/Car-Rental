@@ -1,5 +1,5 @@
 import React from 'react'
-import './footer.css';
+import './footer.scss';
 
 import { BsTelephoneFill } from 'react-icons/bs';
 
@@ -9,9 +9,9 @@ import { IoMdMail } from 'react-icons/io';
 
 const Footer = () => {
   return (
-    <section className="rental__footer">
-      <div className="rental__footer-content">
-        <div className="rental__footer-content_info">
+    <section className="footer">
+      <div className="footer__content">
+        <div className="footer__content-info">
           <ul>
             <li><span>CAR</span> Rental</li>
             <li>We offer a big range of vehicles for all your driving needs. We have the perfect car to meet your needs.</li>
@@ -24,7 +24,7 @@ const Footer = () => {
 
         </div>
         
-        <div className="rental__footer-content_company">
+        <div className="footer__content-company">
           <ul>
             <li>COMPANY</li>
             <li><a href="#top">New York</a></li>
@@ -35,7 +35,7 @@ const Footer = () => {
           </ul>
         </div>
         
-        <div className="rental__footer-content_hours">
+        <div className="footer__content-hours">
           <ul>
             <li>WORKING HOURS</li>
             <li>Mon - Fri: 9:00 AM - 9:00 PM</li>
@@ -44,7 +44,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="rental__footer-content_subscription">
+        <div className="footer__content-subscription">
           <ul>
             <li>SUBSCRIPTION</li>
             <li>Subscribe your Email address for latest news & updates.</li>
