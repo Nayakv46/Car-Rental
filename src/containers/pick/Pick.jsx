@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import './pick.css';
+import './pick.scss';
 
 import audia1 from "../../assets/audia1.jpg";
 import benzglk from "../../assets/benzglk.jpg";
@@ -140,14 +140,14 @@ const Pick = () => {
 
 
   return (
-    <section className="rental__pick">
-      <div className="rental__pick-header">
-        <h2>Vehicle Models</h2>
-        <h1>Our rental fleet</h1>
-        <p>Choose from a variety of our amazing vehicles to rent for your next adventure or business trip</p>
+    <section className="pick">
+      <div className="pick__header">
+        <h3 className='pick__header-name'>Vehicle Models</h3>
+        <h2 className='pick__header-title'>Our rental fleet</h2>
+        <p className='pick__header-text'>Choose from a variety of our amazing vehicles to rent for your next adventure or business trip</p>
       </div>
-      <div className="rental__pick_car-content">
-        <div className="rental__pick_car-content_pick">
+      <div className="pick__content">
+        <div className="pick__content-buttons">
           <button className="pick-button picked" id="btn1" onClick={(e) => changePick(carData[0], e.target.id)}>Audi A1 S-Line</button>
           <button className="pick-button" id="btn2"
             onClick={(e) => changePick(carData[1], e.target.id)}
@@ -165,17 +165,17 @@ const Pick = () => {
             onClick={(e) => changePick(carData[5], e.target.id)}
           >VW Passat CC</button>
         </div>
-        <div className="rental__pick_car-content_car">
-          <div className="rental__pick_car-content_car-picked">
+        <div className="pick__car-details">
+          <div className="pick__car-image">
             <img src={imageChange(toggleCar.imgId)} alt="picked-car" />
           </div>
-          <div className="rental__pick_car-content_car-description">
+          <div className="pick__car-description">
 
-            <div className="rental__pick_car-content_car-description_price">
-              <span>{toggleCar.Price} </span><p>/ rent per day</p>
+            <div className="pick__car-price">
+              <span className='pick__car-emphasis'>{toggleCar.Price} </span><p className='pick__car-text'>/ rent per day</p>
 
             </div>
-            <div className="rental__pick_car-content_car-description_table">
+            <div className="pick__car-table">
               <TablesRow name="Model" value={toggleCar.Model}/>
               <TablesRow name="Mark" value={toggleCar.Mark} />
               <TablesRow name="Year" value={toggleCar.Year} />

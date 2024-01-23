@@ -1,16 +1,18 @@
 import React from 'react';
 
+import './select.scss'
+
 import { BiSolidCar } from 'react-icons/bi';
 import { FaLocationDot } from 'react-icons/fa6';
 
 const Select = (props) => (
-    <div className="book-form_input">
-      <label>
-        {props.label === "Car Type" ? <BiSolidCar size={20} />
-          : <FaLocationDot size={20} />  
-        }{props.label} <b>*</b>
+    <div className="select__container">
+      <label className='select__label'>
+        {props.label === "Car Type" ? <BiSolidCar className='select__label-icon' size={20} />
+          : <FaLocationDot className='select__label-icon' size={20} />  
+        }{props.label} <b className='select__label-required'>*</b>
       </label>
-      <select name={props.name} required={true} onChange={props.changeHandler}>
+      <select name={props.name} required={true} onChange={props.changeHandler} className='select__input'>
 
         <option value="">Select Your {props.label}</option>
         {props.options.map((option, index) => (

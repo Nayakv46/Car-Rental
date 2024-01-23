@@ -1,0 +1,89 @@
+.booking{
+    background: var(--booking-bg);
+
+    &__container {
+        background: url(../../assets/booking_bg.png);
+        background-size: cover;
+        background-position: 50%;
+        width: 100%;
+        font-family: var(--font-family);
+        border-radius: 5px;
+        box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.25);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.confirm-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #c3fabe;
+    padding: 0.6rem 0.85rem;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    color: #2a6817;
+}
+
+.error-message svg,
+.confirm-message svg{
+    cursor: pointer;
+}
+
+.error-message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8d7da;
+    padding: 0.6rem 0.85rem;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    color: #721c24;
+}
+
+.bookForm{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+
+    &__button {
+        align-self: self-end;
+        padding: 0.35rem;
+        color: #fff;
+        font-family: var(--font-family);
+        font-size: 18px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+        background: var(--color-secondary);
+        border: 2px solid var(--color-secondary);
+        box-shadow: 0 10px 15px 0 rgba(255,83,48,0.35);
+
+        &:hover {
+            background: #fa4226;
+            box-shadow: 0 10px 15px 0 rgba(255, 83, 38, 0.5);
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .bookForm{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .bookForm{
+        display: flex;
+        flex-direction: column;
+    }
+    .bookForm__button {
+        width: 100%;
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './whyUsBox.css';
+import './whyUsBox.scss';
 
 import whyusicon1 from '../../assets/whyusicon1.png';
 import whyusicon2 from '../../assets/whyusicon2.png';
@@ -23,11 +23,11 @@ const WhyUsBox = (props) => {
   }
 
   return (
-    <div className="whyusbox_container">
-        <img src={srcHandler(props.src)} alt="whyus_img"/>
-        <div className="whyusbox_container-content">
-            <h4>{props.header}</h4>
-            <p>{props.paragraph}</p>
+    <div className="whyusbox__container">
+        <img src={srcHandler(props.src)} alt="whyus_img" className='whyusbox__image'/>
+        <div className="whyusbox__container-content">
+            <h4 className='whyusbox__header'>{props.header}</h4>
+            <p className='whyusbox__paragraph'>{props.paragraph}</p>
         </div>
     </div>
   )

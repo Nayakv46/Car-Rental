@@ -1,5 +1,5 @@
 import { React, useState} from 'react'
-import './booking.css';
+import './booking.scss';
 
 import { GrFormClose } from 'react-icons/gr';
 
@@ -70,9 +70,9 @@ const Booking = () => {
   }
 
   return (
-    <section id="book" className='rental__booking'>
-      <div className="rental__booking_container">
-        <div className="rental__booking_container-content">
+    <section id="book" className='booking'>
+      <div className="booking__container">
+        
           <h2>Book a car</h2>
           { toggleConfirm
             ? <p className="confirm-message">Check your email to confirm an order. <GrFormClose size={32} onClick={() => setToggleConfirm(false)} /></p>
@@ -82,39 +82,40 @@ const Booking = () => {
             ? <p className="error-message">All fields required! <GrFormClose size={32}  onClick={() => setToggleError(false)} /></p>
             : null
           }
-          <form className="book-form">
-            <Select 
+          <form className="bookForm">
+            <Select
               label="Car Type"
               options={Cars}
               name="carType"
               changeHandler={changeHandler}
             />
-            <Select 
-              label="Pick-up Location" 
+            <Select
+              label="Pick-up Location"
               options={Locations}
               name="pickUpLocation"
               changeHandler={changeHandler}
             />
-            <Select 
+            <Select
               label="Drop-off Location"
               options={Locations}
               name="dropOffLocation"
               changeHandler={changeHandler}
             />
-            <Input 
-              label="Pick-up Date" 
-              type="date" 
+            <Input
+              label="Pick-up Date"
+              type="date"
               name="pickUpDate"
               changeHandler={changeHandler}
             />
-            <Input 
-              label="Drop-off Date" 
-              type="date" 
-              name="dropOffDate"  
+            <Input
+              label="Drop-off Date"
+              type="date"
+              name="dropOffDate"
               changeHandler={changeHandler}
             />
-            <button 
-              type="button" 
+            <button
+              className='bookForm__button'
+              type="button"
               onClick={() => {
 
                 validationHandler();
@@ -123,13 +124,12 @@ const Booking = () => {
             >Search</button>
           </form>
 
-        </div>
         {toggleError === false && toggleSearch === true && toggleValidate === true
-          ?  <Reservation 
-                carType={allValues.carType} 
-                pickUpLocation={allValues.pickUpLocation} dropOffLocation={allValues.dropOffLocation} pickUpDate={allValues.pickUpDate} 
-                dropOffDate={allValues.dropOffDate} 
-                toggleSearch={setToggleSearch} 
+          ?  <Reservation
+                carType={allValues.carType}
+                pickUpLocation={allValues.pickUpLocation} dropOffLocation={allValues.dropOffLocation} pickUpDate={allValues.pickUpDate}
+                dropOffDate={allValues.dropOffDate}
+                toggleSearch={setToggleSearch}
                 toggleConfirm={setToggleConfirm}
               />
           : <></>

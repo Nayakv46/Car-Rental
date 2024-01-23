@@ -1,0 +1,26 @@
+.reservationInput{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &__label {
+        color: #777;
+        font-weight: 500;
+        margin-bottom: 0.25rem;
+
+        &-required {
+            color: var(--color-secondary);
+        }
+    }
+
+    &__input {
+        background: rgba(0,0,0,0.15);
+        font-size: 15px;
+        padding: 0.75rem 1rem;
+        border: none;
+    }
+
+    &__text {
+        font-size: 10px;
+    }
+}

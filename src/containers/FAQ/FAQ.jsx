@@ -1,19 +1,19 @@
 import React from 'react';
-import './faq.css';
+import './faq.scss';
 
 import QuestionBox from '../../components/questionBox/QuestionBox';
 
 const FAQ = () => {
   return (
-    <section className="rental__faq">
-      <div className="rental__faq-content">
-        <div className="rental__faq-content_header">
-          <h4>FAQ</h4>
-          <h1>Frequently Asked Questions</h1>
-          <p>Frequently Asked Questions About the Car Rental Booking Process on Our Website: Answers to Common Concerns and Inquiries.</p>
+    <section className="faq">
+      <div className="faq__content">
+        <div className="faq__content-header">
+          <h4 className='faq__shortName'>FAQ</h4>
+          <h2 className='faq__longName'>Frequently Asked Questions</h2>
+          <p className='faq__text'>Frequently Asked Questions About the Car Rental Booking Process on Our Website: Answers to Common Concerns and Inquiries.</p>
         </div>
 
-        <div className="rental__faq-content_questions">
+        <div className="faq__content-questions">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"></link>
           <QuestionBox 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './scrollUp.css';
+import './scrollUp.scss';
 
 import { FaChevronUp } from 'react-icons/fa';
 

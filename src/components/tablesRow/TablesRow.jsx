@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './tablesRow.css';
+import './tablesRow.scss';
 
 const TablesRow = (props) => {
   return (

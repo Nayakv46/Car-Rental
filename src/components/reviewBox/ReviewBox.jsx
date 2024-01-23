@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './reviewBox.css'
+import './reviewBox.scss'
 
 import { FaQuoteRight } from 'react-icons/fa';
 
@@ -26,14 +26,14 @@ const ReviewBox = (props) => {
 
 
   return (
-    <div className="review-box">
-        <p>" {props.review} "</p>
-        <div className="review-box_profile">
-            <img src={imgHandler(props.img)} alt="profile-img" />
-            <div className="review-box_profile-content">
-                <div className="review-box_profile-content_info">
-                    <h3>{props.name}</h3>
-                    <p>{props.location}</p>
+    <div className="reviewBox">
+        <p className='reviewBox__text'>" {props.review} "</p>
+        <div className="reviewBox__profile">
+            <img src={imgHandler(props.img)} alt="profile-img" className='reviewBox__profile-image'/>
+            <div className="reviewBox__profile-content">
+                <div className="reviewBox__profile-info">
+                    <h3 className='reviewBox__profile-name'>{props.name}</h3>
+                    <p className='reviewBox__profile-location'>{props.location}</p>
                 </div>
                 <FaQuoteRight size={32} />
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './teamMember.css';
+import './teamMember.scss';
 
 import team_img1 from '../../assets/team-photo1.png';
 import team_img2 from '../../assets/team-photo2.png';
@@ -31,14 +31,14 @@ const TeamMember = (props) => {
     }
 
   return (
-    <div className="member_box">
-        <div className="member_box-image">
+    <div className="memberBox">
+        <div className="memberBox__image">
             <img src={imgHandler(props.img)} alt="member-img" />
         </div>
 
-        <div className="member_box-description">
+        <div className="memberBox__description">
             <h2>{props.name}</h2>
-            <p>{props.role}</p>
+            <p className='memberBox__description-role'>{props.role}</p>
         </div>
     </div>
   )

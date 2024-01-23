@@ -16,7 +16,7 @@ const Team = () => {
             <TeamMember img="3" name="Briana Ross" role="Photographer" />
             <TeamMember img="4" name="Lauren Rivera" role="Car Detalist" />
             <TeamMember img="5" name="Martin Rizz" role="Mechanic" />
-            <TeamMember img="6" name="Caitlyn Hunt" role="Menager" />
+            <TeamMember img="6" name="Caitlyn Hunt" role="Manager" />
           </div>
         </section>
         <ContactBanner />

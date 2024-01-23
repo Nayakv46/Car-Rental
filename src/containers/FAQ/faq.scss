@@ -1,0 +1,39 @@
+.faq{
+    background: url('../../assets/faq-bg.png');
+    background-position: 0 70%;
+    background-repeat: no-repeat;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        font-family: var(--font-family);
+
+        &-header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            & > .faq__shortName {
+                font-size: 22px;
+            }
+
+            & > .faq__longName {
+                font-size: 42px;
+            }
+
+            & > .faq__text{
+                margin-top: 1rem;
+                color: #706f7b;
+                font-size: 15px;
+            }
+        }
+
+        &-questions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

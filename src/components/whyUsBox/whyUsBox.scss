@@ -1,0 +1,39 @@
+.whyusbox {
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 2rem 2rem 1rem;
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-family: var(--font-family);
+            max-width: 30rem;
+        }
+    }
+
+    &__image {
+        width: 110px;
+        height: 110px;
+        margin-top: 0.5rem;
+    }
+
+    &__header {
+        font-size: 24px;
+    }
+
+    &__paragraph {
+        color: #706f7b;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .whyusbox__container{
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+}

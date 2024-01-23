@@ -1,12 +1,12 @@
 import React from 'react'
-import './banner.css';
+import './banner.scss';
 
 const Banner = () => {
   return (
-    <section className="rental__banner">
-      <div className="rental__banner-content">
-        <h2>Save big with our cheap car rental!</h2>
-        <p>Top Airports. Local Suppliers. <span>24/7</span> Support</p>
+    <section className="banner">
+      <div className="banner__content">
+        <h2 className='banner__header'>Save big with our cheap car rental!</h2>
+        <p className='banner__text'>Top Airports. Local Suppliers. <span className='banner__text-emphasis'>24/7</span> Support</p>
       </div>
     </section>
   )
