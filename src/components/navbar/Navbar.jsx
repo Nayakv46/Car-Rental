@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-import './navbar.css';
+import './navbar.scss';
 
 import logo from '../../assets/logo.png';
 
@@ -23,35 +23,35 @@ const Navbar = () => {
 
 
   return (
-    <nav className="rental__navbar" id="top">
-      <div className="rental__navbar-logo">
+    <nav className="navbar" id="top">
+      <div className="navbar__logo">
         <Link to='/'>
           <img src={logo} alt="logo" />
         </Link>
       </div>
 
-      <ul className="rental__navbar-links">
+      <ul className="navbar__links">
           <Menu />
       </ul>
 
-      <div className="rental__navbar-sign">
-        <p><Link to="/">Sign in</Link></p>
+      <div className="navbar__sign">
+        <Link to="/">Sign in</Link>
         <Link to='/' className="nav-button">Register</Link>
       </div>
 
-      <div className="rental__navbar-menu">
+      <div className="navbar__menu">
         {toggleMenu
-        ? <RiCloseLine color="#010306" size={36} onClick={() => setToggleMenu(false)} />
-        : <RiMenu3Line color="#010306" size={27} onClick={() => setToggleMenu(true)} />
+        ? <RiCloseLine className='navbar__menu-svg' color="#010306" size={36} onClick={() => setToggleMenu(false)} />
+        : <RiMenu3Line className='navbar__menu-svg' color="#010306" size={27} onClick={() => setToggleMenu(true)} />
         }
 
         {toggleMenu && (
-          <div className="rental__navbar-menu_container scale-up-center">
-            <ul className="rental__navbar-menu-container-links">
+          <div className="navbar__menu-container">
+            <ul className="navbar__menu-links">
               <Menu />
             </ul>
-            <div className="rental__navbar-menu_container-links-sign">
-              <Link to='/'><p>Sign in</p></Link>
+            <div className="navbar__menu-sign">
+              <Link to='/'>Sign in</Link>
               <Link to='/' className="nav-button">Register</Link>
             </div>
           </div>
