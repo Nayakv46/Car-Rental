@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './questionBox.css';
+import './questionBox.scss';
 
 
 
@@ -23,15 +23,15 @@ const QuestionBox = (props) => {
 
   return (
     <div id={props.id} className="questionBox" onClick={(e) => showAnswer(e.target.id)} >
-        <div id={props.id} className="questionBox_question">
-            <p id={props.id}>{props.id}. {props.question}</p>
+        <div id={props.id} className="questionBox__question">
+            <p className='questionBox__question-text' id={props.id}>{props.id}. {props.question}</p>
             
             <span id={props.id} className="material-icons">
                 expand_more
             </span>
 
         </div>
-        <div id={props.id} className="questionBox_answer">
+        <div id={props.id} className="questionBox__answer">
             {props.answer}
         </div>
     </div>
