@@ -8,7 +8,7 @@
 
 <h3>Built with:</h3>
 
-» BEM CSS <br/>
+» SCSS <br/>
 » React JS
 
 <h2>Screenshots of the Project 📸</h2>
